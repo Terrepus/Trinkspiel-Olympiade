@@ -1,0 +1,10 @@
+Richard:50
+Till:50
+Matthias:40
+Jannes:40
+Jonas:20
+Fabian:20
+Basti:30
+Hannah:30
+Robin:10
+Oskar:10

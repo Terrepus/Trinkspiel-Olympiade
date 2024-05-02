@@ -1,0 +1,5 @@
+flunkyball,beerpong,flipcup
+Richard+Anton:30,30,40
+Elias+Georg:40,20,30
+Jonas+Lorenz:10,40,10
+Mo+Bruno:20,10,20

@@ -1,0 +1,16 @@
+Georg:80
+Hannah:80
+Jonas:20
+Bruno:20
+Till:60
+Anna:60
+Lina:50
+Jochen:50
+Elias:70
+Amelie:70
+Jannes:40
+Roman:40
+Richard:30
+Melli:30
+Robin:10
+Charlie:10

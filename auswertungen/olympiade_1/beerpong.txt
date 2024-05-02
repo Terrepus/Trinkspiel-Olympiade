@@ -1,0 +1,8 @@
+Richard:30
+Anton:30
+Elias:20
+Georg:20
+Jonas:40
+Lorenz:40
+Mo:10
+Bruno:10
