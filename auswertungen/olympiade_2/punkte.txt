@@ -1,7 +1,7 @@
 flunkyball,beerpong,flipcup
-Jannes+Georg:0,0,50
-Matthias+Richard:0,0,40
-Doro+Basti:0,0,30
-Doro+Melli:0,0,30
-Jonas+Robin:0,0,20
-Fabian+Hannah:0,0,10
+Jannes+Georg:0,0,0,50
+Matthias+Richard:0,0,0,40
+Doro+Basti:0,0,0,30
+Doro+Melli:0,0,0,30
+Jonas+Robin:0,0,0,20
+Fabian+Hannah:0,0,0,10
