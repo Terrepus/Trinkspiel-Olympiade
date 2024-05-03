@@ -103,7 +103,7 @@ li a:active{
 ul.regeln {
     list-style-type:disc; 
     align-items: left;
-    text-align: left;
+    text-align: justify;
     width: 70%;
     margin:auto;
 }
