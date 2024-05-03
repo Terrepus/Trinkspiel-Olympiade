@@ -1,6 +1,0 @@
-flunkyball,beerpong,flipcup
-Richard+Till:50,40,20
-Matthias+Jannes:40,50,10
-Jonas+Fabian:20,30,50
-Basti+Hannah:30,10,40
-Robin+Oskar:10,20,30
