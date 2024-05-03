@@ -48,6 +48,10 @@ nav ul li{
     text-align: center;
     align-items: center;
 }
+nav ul li a:visited{
+    text-decoration: none;
+    color:black
+}
 nav ul li:hover{
     text-decoration: underline;
     cursor: pointer;
@@ -89,11 +93,33 @@ li a{
 li a:hover{
     text-decoration: underline;
 }
+li a:visited{
+    color:black
+}
 li a:active{
     background-color: black;
     text-emphasis-color: black;
 }
 
+ul.regeln {
+    list-style-type:disc; 
+    align-items: left;
+    text-align: left;
+    margin-left: 200px;
+}
+ul.regeln li{
+    display:list-item;
+    margin: 10px
+}
+ul.regeln li ul {
+    list-style-type:circle;
+}
+
+p.abschließende_worte{
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+}
 
 section{
     background-color: gray;
