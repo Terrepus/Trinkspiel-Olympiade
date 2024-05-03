@@ -1,6 +1,6 @@
 flunkyball,beerpong,flipcup
-Richard+Hannah:20,30,50
-Lorenz+Roman:30,50,20
-Robin+Jonas:40,10,40
-Bruno+Georg:50,20,10
-Anton+Melli:10,40,30
+Richard+Hannah:20,30,50,50
+Lorenz+Roman:30,50,20,40
+Robin+Jonas:40,10,40,30
+Bruno+Georg:50,20,10,20
+Anton+Melli:10,40,30,10
