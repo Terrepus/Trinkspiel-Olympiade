@@ -1,16 +1,35 @@
 
-async function fetchDataOlympiade(olympiade,jahr,n){
+async function fetchDataOlympiade(olympiade,n,sort=0){
     var element = document.getElementById("auswertungen"); 
     while (element.firstChild) { 
         element.removeChild(element.firstChild); 
          
     }
-
-    document.getElementById("title").innerHTML = "Trinkspiel-Olympiade "+jahr
-     
+    if (olympiade != 0){
+        document.getElementById("title").innerHTML = "Trinkspiel-Olympiade "+olympiade
+    }
+    else{
+        var title = document.getElementById("title").innerHTML        
+        title = title.replace("Trinkspiel-Olympiade ","")
+        title = title.replaceAll(" ","")
+        title = title.split("-")
+        olympiade = parseInt(title[0])
+    }
+    if(n==0){
+        if (olympiade==5){
+            n=9
+        }
+        else if(olympiade==4 || olympiade==3){
+            n=6
+        }
+        else if(olympiade==2){
+            n=7
+        }
+        else if(olympiade==1){
+            n=5
+        }
+    }
     
-
-
     var punkte_url = "./auswertungen/olympiade_" + olympiade + "/punkte.txt"
     let punkte_respone = await fetch(punkte_url);
     let punkte_data = await punkte_respone.text();
@@ -38,6 +57,55 @@ async function fetchDataOlympiade(olympiade,jahr,n){
                     "gesamt_platz":c+1
                 }
         c++
+        }
+
+        if (sort == 1){
+            for (var i=0;i<teams.length-1;i++){
+                if(teams[i].flunky_score < teams[i+1].flunky_score){
+                    var tmp = teams[i]
+                    teams[i] = teams[i+1]
+                    teams[i+1] = tmp
+                    i=-1
+                }
+            }
+            document.getElementById("title").innerHTML = "Trinkspiel-Olympiade "+olympiade +" - Flunkyball"   
+        }
+    
+        if (sort == 2){
+            for (var i=0;i<teams.length-1;i++){
+                console.log(teams[i])
+                if(teams[i].beerpong_score < teams[i+1].beerpong_score){
+                    var tmp = teams[i]
+                    teams[i] = teams[i+1]
+                    teams[i+1] = tmp
+                    i=-1
+                }
+            }
+            document.getElementById("title").innerHTML = "Trinkspiel-Olympiade "+olympiade +" - Beerpong"   
+        }
+    
+        if (sort == 3){
+            for (var i=0;i<teams.length-1;i++){
+                if(teams[i].flipcup_score < teams[i+1].flipcup_score){
+                    var tmp = teams[i]
+                    teams[i] = teams[i+1]
+                    teams[i+1] = tmp
+                    i=-1
+                }
+            }
+            document.getElementById("title").innerHTML = "Trinkspiel-Olympiade " +olympiade +" - Flipcup"   
+        }
+    
+        if (sort == 0){
+            for (var i=0;i<teams.length-1;i++){
+                if(teams[i].gesamt_score < teams[i+1].gesamt_score){
+                    var tmp = teams[i]
+                    teams[i] = teams[i+1]
+                    teams[i+1] = tmp
+                    i=-1
+                }
+            }
+            document.getElementById("title").innerHTML = "Trinkspiel-Olympiade "+olympiade   
         }
 
     for (var i = 0; i<n-1; i++){    
@@ -93,9 +161,4 @@ async function fetchDataOlympiade(olympiade,jahr,n){
         }
     
     }
-
-//fetchData("olympiade_1","2020",5)
-
-//fetchData("olympiade_2","2021",6)
-//fetchData("olympiade_3","2022",6)
-//fetchData("olympiade_4","2023",9)
+fetchDataOlympiade(5,9)

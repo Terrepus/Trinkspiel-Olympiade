@@ -30,7 +30,7 @@ async function fetchDataGesamt(n,sort=0){
                     "beerpong_platz":"",
                     "flipcup_score":parseInt(s[2]),
                     "flipcup_platz":"",                    
-                    "gesamt_score":parseInt(s[0])+parseInt(s[1])+parseInt(s[2]),
+                    "gesamt_score":parseInt(s[3]),
                     "gesamt_platz_score":"",
                     "gesamt_platz":c+1
                 }
@@ -42,7 +42,7 @@ async function fetchDataGesamt(n,sort=0){
                 var tmp = teams[i]
                 teams[i] = teams[i+1]
                 teams[i+1] = tmp
-                i=0
+                i=-1
             }
         }
         document.getElementById("title").innerHTML = "Gesamtauswertung - Flunkyball"   
@@ -55,7 +55,7 @@ async function fetchDataGesamt(n,sort=0){
                 var tmp = teams[i]
                 teams[i] = teams[i+1]
                 teams[i+1] = tmp
-                i=0
+                i=-1
             }
         }
         document.getElementById("title").innerHTML = "Gesamtauswertung - Beerpong"   
@@ -67,7 +67,7 @@ async function fetchDataGesamt(n,sort=0){
                 var tmp = teams[i]
                 teams[i] = teams[i+1]
                 teams[i+1] = tmp
-                i=0
+                i=-1
             }
         }
         document.getElementById("title").innerHTML = "Gesamtauswertung - Flipcup"   
@@ -75,11 +75,11 @@ async function fetchDataGesamt(n,sort=0){
 
     if (sort == 0){
         for (var i=0;i<teams.length-1;i++){
-            if(teams[i].gesamt_score < teams[i+1].gesat_score){
+            if(teams[i].gesamt_score < teams[i+1].gesamt_score){
                 var tmp = teams[i]
                 teams[i] = teams[i+1]
                 teams[i+1] = tmp
-                i=0
+                i=-1
             }
         }
         document.getElementById("title").innerHTML = "Gesamtauswertung"   
@@ -138,4 +138,4 @@ async function fetchDataGesamt(n,sort=0){
     
     }
 
-fetchDataGesamt(24)
+fetchDataGesamt(25,0)
