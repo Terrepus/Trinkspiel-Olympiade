@@ -7,7 +7,7 @@ div.table_body{
 }
 
 div.table{
-    width: 82vw;
+    width: 90%;
     background-color: rgba(7, 7, 7, 0.356);
 
     backdrop-filter: blur(7px);
