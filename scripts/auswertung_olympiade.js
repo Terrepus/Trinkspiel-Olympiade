@@ -52,7 +52,7 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
                     "beerpong_platz":n - parseInt(s[1])/10,
                     "flipcup_score":parseInt(s[2]),
                     "flipcup_platz":n - parseInt(s[2])/10,                    
-                    "gesamt_score":parseInt(s[0])+parseInt(s[1])+parseInt(s[2]),
+                    "gesamt_score":parseInt(s[3]),
                     "gesamt_platz_score":n - parseInt(s[0])/10 + n-parseInt(s[1])/10 + n-parseInt(s[2])/10,
                     "gesamt_platz":c+1
                 }
