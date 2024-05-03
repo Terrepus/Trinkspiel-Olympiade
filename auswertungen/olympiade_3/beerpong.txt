@@ -1,0 +1,10 @@
+Richard:30
+Hannah:30
+Lorenz:50
+Roman:50
+Robin:10
+Jonas:10
+Bruno:20
+Georg:20
+Anton:40
+Melli:40
