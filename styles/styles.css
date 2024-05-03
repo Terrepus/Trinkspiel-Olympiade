@@ -104,7 +104,8 @@ ul.regeln {
     list-style-type:disc; 
     align-items: left;
     text-align: left;
-    margin-left: 200px;
+    width: 70%;
+    margin:auto;
 }
 ul.regeln li{
     display:list-item;
@@ -166,7 +167,7 @@ section.feature-box.gesamtauswertung{
 
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 900px){
     header{
         background-color: gray;
         text-align: center;
