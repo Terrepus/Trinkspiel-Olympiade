@@ -1,41 +1,40 @@
 body{
-    background:rgb(92, 91, 91);
+    background:rgb(153, 153, 153);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 button{
     border: none;
 }
 header{
-    background-color: gray;
     background-image: url("../images/banner.png");
+    border-radius: 5px;
     text-align: center;
-    height: 300px;
-    background-size: 100%;
+    height: 350px;
+    background-size: 50%;
     background-position: center;
-    padding: 20px;
+    
+    text-align: center;
 }
+ul.header{
+    height: 100%;
+    width:100%;
+}
+
+ul.header li{
+    background-color: rgb(199, 199, 199);
+    border-radius: 5px;
+    margin-top:300px;
+}
+
 header a{
     text-transform: uppercase;
     color: black;
-    margin-top: 270px;
     font-size: x-large;
+    align-items: center;
 }
-header .logo a{
-    background-image: url("../images/no_background/logo_alle.png");
-    background-size: 300px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 300px;
-    scale: 0.5;
-    position: relative;
-    text-indent: -9999999px;
-    top: -189px;
-    width: 300px;
-}
-
 
 nav{
-    background-color: gray; 
+    background-color: rgb(167, 167, 167); 
     margin:5px;
     padding: 10px;
     display: flex;
@@ -122,7 +121,7 @@ p.abschließende_worte{
 }
 
 section{
-    background-color: gray;
+    background-color: rgb(192, 192, 192);
     margin: 5px;    
     padding: 3px;
     border-radius: 5px;
