@@ -96,25 +96,15 @@ async function fetchDataGesamt(n,sort=0){
         var beerpong = document.createElement("td")
         var flipcup = document.createElement("td")
         var gesamt = document.createElement("td")
+        pic1.src="images/profilbilder/default.png"        
+        
+        var player1_name = teams[i].player.toLowerCase()
+        pic1.src = "images/profilbilder/" + player1_name +".png"
 
         
-        pic1.src="images/profilbilder/default.png"
-        pic2.src="images/profilbilder/default.png"
-        if (teams[i].player1 == "Jonas" || teams[i].player2 == "Jonas"){
-            if (teams[i].player1 == "Jonas"){
-                pic1.src="images/profilbilder/jonas.png"
-            }
-            else{
-                pic2.src="images/profilbilder/jonas.png"
-            }
-        }
-        else if (teams[i].player1 == "Hannah" || teams[i].player2 == "Hannah"){
-            if (teams[i].player1 == "Hannah"){
-                pic1.src="images/profilbilder/hannah.png"
-            }
-            else{
-                pic2.src="images/profilbilder/hannah.png"
-            }
+        if(player1_name == "mo" || player1_name == "anna" || player1_name == "anton" || player1_name == "jochen" || player1_name == "bruno" || player1_name == "lina" || player1_name == "melli" || player1_name == "charlie" || player1_name == "matthias" || player1_name == "oskar" || player1_name == "basti"){
+            pic1.src="images/profilbilder/default.png"
+            
         }
 
         rank.innerHTML += teams[i].gesamt_platz
@@ -138,4 +128,4 @@ async function fetchDataGesamt(n,sort=0){
     
     }
 
-fetchDataGesamt(25,0)
+fetchDataGesamt(31,0)

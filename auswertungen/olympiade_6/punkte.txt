@@ -1,0 +1,10 @@
+flunkyball,beerpong,flipcup
+Till+Elias:90,50,80,90
+Jannes+Marc:60,90,40,80
+Hannah+Carl:70,40,70,70
+Jonas+Doro:20,80,60,60
+Roman+Jason:40,30,90,50
+Richard+Robin:50,70,30,40
+Amelie+Fabian:80,10,50,30
+Lukas+Lorenz:30,60,10,20
+Lena+Artur:10,20,20,10

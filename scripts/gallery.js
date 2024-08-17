@@ -16,11 +16,14 @@ async function loadgallery(olympiade){
 
     document.getElementById("title").innerHTML = "Trinkspiel-Olympiade " + olympiade
     switch(olympiade){
+        case 6:
+            n=199
+            break
         case 5:
-            n=23
+            n=24
             break
         case 4:
-            n=28
+            n=29
             break
         case 3:
             n=28
@@ -164,4 +167,4 @@ async function loadgallery(olympiade){
     */
     
 }
-loadgallery(5)
+loadgallery(6)

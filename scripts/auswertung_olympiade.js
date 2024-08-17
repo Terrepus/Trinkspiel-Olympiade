@@ -16,7 +16,10 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
         olympiade = parseInt(title[0])
     }
     if(n==0){
-        if (olympiade==5){
+        if (olympiade==6){
+            n=10
+        }
+        else if (olympiade==5){
             n=9
         }
         else if(olympiade==4 || olympiade==3){
@@ -118,27 +121,24 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
         var beerpong = document.createElement("td")
         var flipcup = document.createElement("td")
         var gesamt = document.createElement("td")
-
         
         pic1.src="images/profilbilder/default.png"
         pic2.src="images/profilbilder/default.png"
-        if (teams[i].player1 == "Jonas" || teams[i].player2 == "Jonas"){
-            if (teams[i].player1 == "Jonas"){
-                pic1.src="images/profilbilder/jonas.png"
-            }
-            else{
-                pic2.src="images/profilbilder/jonas.png"
-            }
-        }
-        else if (teams[i].player1 == "Hannah" || teams[i].player2 == "Hannah"){
-            if (teams[i].player1 == "Hannah"){
-                pic1.src="images/profilbilder/hannah.png"
-            }
-            else{
-                pic2.src="images/profilbilder/hannah.png"
-            }
-        }
+        var player1_name = teams[i].player1.toLowerCase()
+        var player2_name = teams[i].player2.toLowerCase()
+        pic1.src = "images/profilbilder/" + player1_name +".png"
+        pic2.src = "images/profilbilder/" + player2_name +".png"
 
+        if(player1_name == "mo" || player1_name == "anna" || player1_name == "anton" || player1_name == "jochen" || player1_name == "bruno" || player1_name == "lina" || player1_name == "melli" || player1_name == "charlie" || player1_name == "matthias" || player1_name == "oskar" || player1_name == "basti"){
+            pic1.src="images/profilbilder/default.png"
+            
+        }
+        if (player2_name == "mo" || player2_name == "anna" || player2_name == "anton" || player2_name == "jochen" || player2_name == "bruno" || player2_name == "lina" || player2_name == "melli" || player2_name == "charlie" || player2_name == "matthias" || player2_name == "oskar" || player2_name == "basti"){
+            pic2.src="images/profilbilder/default.png"
+        }
+        
+        
+        
         rank.innerHTML += teams[i].gesamt_platz
         team.appendChild(pic1)
         team.innerHTML += teams[i].player1 + " & "
@@ -161,4 +161,4 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
         }
     
     }
-fetchDataOlympiade(5,9)
+fetchDataOlympiade(6,10)
