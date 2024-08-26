@@ -43,6 +43,9 @@ async function loadgallery(olympiade){
         //img.src = "images/olympiade_1/olymp_1 " + "(" + i + ").jpg" 
         img.src = "images/olympiade_" + olympiade + "/olymp_"+ olympiade + " (" + i + ").jpg" 
         box.className = "picbox"
+        img.onclick = function(){
+            openModal(this);
+        };
         box.appendChild(img)
         //document.getElementById("olymp_1").appendChild(box)
         if (count == 0){
@@ -56,115 +59,8 @@ async function loadgallery(olympiade){
             count=-1;
         }
         count++;
-        //document.section
     }
-
-
-
-
-
-
-
-
-
-
-/*
-
-    if (olympiade==1){
-        count=0;
-        document.getElementById("title").innerHTML = "Trinkspiel-Olympiade 1"
-        for (var i=1; i<= 29;i++ ){
-            var img = document.createElement("img")
-            var box = document.createElement("div")
-            img.src = "images/olympiade_1/olymp_1 " + "(" + i + ").jpg" 
-            box.className = "picbox"
-            box.appendChild(img)
-            //document.getElementById("olymp_1").appendChild(box)
-            if (count == 0){
-                document.getElementById("olymp_1").appendChild(box)
-            }
-            else if (count==1){
-                document.getElementById("olymp_2").appendChild(box)
-            }
-            else if (count==2){
-                document.getElementById("olymp_3").appendChild(box)
-                count=-1;
-            }
-            count++;
-            //document.section
-        }
-    }
-    if(olympiade==2){
-        count=0
-        document.getElementById("title").innerHTML = "Trinkspiel-Olympiade 3"
-        for (var i=1; i<= 28;i++ ){
-            var img = document.createElement("img")
-            var box = document.createElement("div")
-            img.src = "images/olympiade_2/olymp_2 " + "(" + i + ").jpg" 
-            box.className = "picbox"
-            box.appendChild(img)
-            if (count == 0){
-                document.getElementById("olymp_1").appendChild(box)
-            }
-            else if (count==1){
-                document.getElementById("olymp_2").appendChild(box)
-            }
-            else if (count==2){
-                document.getElementById("olymp_3").appendChild(box)
-                count=-1;
-            }
-            count++;
-            //document.section
-        }
-    }
-    
-    if(olympiade==4){
-        count=0;
-        document.getElementById("title").innerHTML = "Trinkspiel-Olympiade 4"
-        for (var i=1; i<= 28;i++ ){
-            var img = document.createElement("img")
-            var box = document.createElement("div")
-            img.src = "images/olympiade_3/olymp_3 " + "(" + i + ").jpg" 
-            box.className = "picbox"
-            box.appendChild(img)
-            if (count == 0){
-                document.getElementById("olymp_1").appendChild(box)
-            }
-            else if (count==1){
-                document.getElementById("olymp_2").appendChild(box)
-            }
-            else if (count==2){
-                document.getElementById("olymp_3").appendChild(box)
-                count=-1;
-            }
-            count++;
-            //document.section
-        }
-    }
-    if(olympiade==5){
-        count=0;
-        document.getElementById("title").innerHTML = "Trinkspiel-Olympiade 5"
-        for (var i=1; i<= 23;i++ ){
-            var img = document.createElement("img")
-            var box = document.createElement("div")
-            img.src = "images/olympiade_4/olymp_4 " + "(" + i + ").jpg" 
-            box.className = "picbox"
-            box.appendChild(img)
-            if (count == 0){
-                document.getElementById("olymp_1").appendChild(box)
-            }
-            else if (count==1){
-                document.getElementById("olymp_2").appendChild(box)
-            }
-            else if (count==2){
-                document.getElementById("olymp_3").appendChild(box)
-                count=-1;
-            }
-            count++;
-            //document.section
-        }
-    }
-    */
-    
 }
+
+ 
 loadgallery(6)

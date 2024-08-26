@@ -116,6 +116,8 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
         var rank = document.createElement("td")
         var pic1 = document.createElement("img")
         var pic2 = document.createElement("img")
+        var name1 = document.createElement("figcaption")
+        var name2 = document.createElement("figcaption")
         var team = document.createElement("td")
         var flunkyball = document.createElement("td")
         var beerpong = document.createElement("td")
@@ -137,13 +139,20 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
             pic2.src="images/profilbilder/default.png"
         }
         
-        
+        pic1.onclick = function(){
+            openModal(this);
+        };
+        pic2.onclick = function(){
+            openModal(this);
+        };
         
         rank.innerHTML += teams[i].gesamt_platz
         team.appendChild(pic1)
-        team.innerHTML += teams[i].player1 + " & "
+        name1.innerHTML += teams[i].player1 + " & "
+        team.appendChild(name1)
         team.appendChild(pic2)
-        team.innerHTML += teams[i].player2
+        name2.innerHTML += teams[i].player2
+        team.appendChild(name2)
         flunkyball.innerHTML += teams[i].flunky_platz +" ("+ teams[i].flunky_score + ")"
         beerpong.innerHTML += teams[i].beerpong_platz +" ("+ teams[i].beerpong_score + ")"
         flipcup.innerHTML += teams[i].flipcup_platz +" ("+ teams[i].flipcup_score + ")"
@@ -158,7 +167,8 @@ async function fetchDataOlympiade(olympiade,n,sort=0){
         var ausw = "auswertungen" 
         document.getElementById(ausw).appendChild(slot)
         
-        }
-    
     }
+    
+}
+
 fetchDataOlympiade(6,10)

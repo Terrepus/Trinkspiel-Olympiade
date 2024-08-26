@@ -1,7 +1,7 @@
 flunkyball,beerpong,flipcup
-Richard:170,210,170,240
 Jonas:170,240,180,240
 Hannah:170,150,230,240
+Richard:170,210,170,240
 Jannes:130,170,90,210
 Georg:140,110,140,180
 Roman:100,110,150,120

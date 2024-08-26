@@ -1,0 +1,29 @@
+.pic_container{
+    display: flex;
+    gap: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.picbox{
+    transition: 0.5s;
+}
+
+.picbox img{
+    height: 100%;
+    width: 100%;
+    max-height: 700px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.picbox:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+@media screen and (max-width: 500px){
+    .picbox img{
+        max-height: 250px;
+    }
+}

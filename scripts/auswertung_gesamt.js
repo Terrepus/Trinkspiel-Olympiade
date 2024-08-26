@@ -1,4 +1,3 @@
-
 async function fetchDataGesamt(n,sort=0){
     var element = document.getElementById("auswertungen"); 
     while (element.firstChild) { 
@@ -16,14 +15,14 @@ async function fetchDataGesamt(n,sort=0){
     punkte_data = punkte_data.replaceAll("\r","")
     var punkte = punkte_data.split("\n")
 
-    var teams = new Array()
+    var player = new Array()
     var c = 0
     for (var i=1;i<n;i++){
         var maxscore = (n-1)*10
         var t = punkte[i].split(":")
         var p = t[0].split("+")
         var s = t[1].split(",")
-        teams[c] = {"player":p[0],
+        player[c] = {"player_name":p[0],
                     "flunky_score":parseInt(s[0]),
                     "flunky_platz":"" ,
                     "beerpong_score":parseInt(s[1]),
@@ -37,11 +36,11 @@ async function fetchDataGesamt(n,sort=0){
         c++
         }
     if (sort == 1){
-        for (var i=0;i<teams.length-1;i++){
-            if(teams[i].flunky_score < teams[i+1].flunky_score){
-                var tmp = teams[i]
-                teams[i] = teams[i+1]
-                teams[i+1] = tmp
+        for (var i=0;i<player.length-1;i++){
+            if(player[i].flunky_score < player[i+1].flunky_score){
+                var tmp = player[i]
+                player[i] = player[i+1]
+                player[i+1] = tmp
                 i=-1
             }
         }
@@ -49,12 +48,12 @@ async function fetchDataGesamt(n,sort=0){
     }
 
     if (sort == 2){
-        for (var i=0;i<teams.length-1;i++){
-            console.log(teams[i])
-            if(teams[i].beerpong_score < teams[i+1].beerpong_score){
-                var tmp = teams[i]
-                teams[i] = teams[i+1]
-                teams[i+1] = tmp
+        for (var i=0;i<player.length-1;i++){
+            console.log(player[i])
+            if(player[i].beerpong_score < player[i+1].beerpong_score){
+                var tmp = player[i]
+                player[i] = player[i+1]
+                player[i+1] = tmp
                 i=-1
             }
         }
@@ -62,11 +61,11 @@ async function fetchDataGesamt(n,sort=0){
     }
 
     if (sort == 3){
-        for (var i=0;i<teams.length-1;i++){
-            if(teams[i].flipcup_score < teams[i+1].flipcup_score){
-                var tmp = teams[i]
-                teams[i] = teams[i+1]
-                teams[i+1] = tmp
+        for (var i=0;i<player.length-1;i++){
+            if(player[i].flipcup_score < player[i+1].flipcup_score){
+                var tmp = player[i]
+                player[i] = player[i+1]
+                player[i+1] = tmp
                 i=-1
             }
         }
@@ -74,11 +73,11 @@ async function fetchDataGesamt(n,sort=0){
     }
 
     if (sort == 0){
-        for (var i=0;i<teams.length-1;i++){
-            if(teams[i].gesamt_score < teams[i+1].gesamt_score){
-                var tmp = teams[i]
-                teams[i] = teams[i+1]
-                teams[i+1] = tmp
+        for (var i=0;i<player.length-1;i++){
+            if(player[i].gesamt_score < player[i+1].gesamt_score){
+                var tmp = player[i]
+                player[i] = player[i+1]
+                player[i+1] = tmp
                 i=-1
             }
         }
@@ -86,46 +85,49 @@ async function fetchDataGesamt(n,sort=0){
     }
     
 
-    for (var i = 0; i<n-1; i++){    
+    for (var i = 0; i<n-1; i++){           
         var slot = document.createElement("tr")
         var rank = document.createElement("td")
-        var pic1 = document.createElement("img")
-        var pic2 = document.createElement("img")
-        var team = document.createElement("td")
+        var pic = document.createElement("img")
+        var name = document.createElement("figcaption")
+        var profile = document.createElement("td")
         var flunkyball = document.createElement("td")
         var beerpong = document.createElement("td")
         var flipcup = document.createElement("td")
         var gesamt = document.createElement("td")
-        pic1.src="images/profilbilder/default.png"        
+        pic.src="images/profilbilder/default.png"        
         
-        var player1_name = teams[i].player.toLowerCase()
-        pic1.src = "images/profilbilder/" + player1_name +".png"
+        var player1_name = player[i].player_name.toLowerCase()
+        pic.src = "images/profilbilder/" + player1_name +".png"
 
         
         if(player1_name == "mo" || player1_name == "anna" || player1_name == "anton" || player1_name == "jochen" || player1_name == "bruno" || player1_name == "lina" || player1_name == "melli" || player1_name == "charlie" || player1_name == "matthias" || player1_name == "oskar" || player1_name == "basti"){
-            pic1.src="images/profilbilder/default.png"
+            pic.src="images/profilbilder/default.png"
             
         }
 
-        rank.innerHTML += teams[i].gesamt_platz
-        team.appendChild(pic1)
-        team.innerHTML += teams[i].player 
-        flunkyball.innerHTML += teams[i].flunky_score 
-        beerpong.innerHTML += teams[i].beerpong_score 
-        flipcup.innerHTML += teams[i].flipcup_score 
-        gesamt.innerHTML +=  teams[i].gesamt_score 
+        pic.onclick = function(){
+            openModal(this);
+        };
+
+        rank.innerHTML += player[i].gesamt_platz
+        profile.appendChild(pic)
+        name.innerHTML += player[i].player_name
+        profile.appendChild(name) 
+        flunkyball.innerHTML += player[i].flunky_score 
+        beerpong.innerHTML += player[i].beerpong_score 
+        flipcup.innerHTML += player[i].flipcup_score 
+        gesamt.innerHTML +=  player[i].gesamt_score 
 
         slot.appendChild(rank)
-        slot.appendChild(team)
+        slot.appendChild(profile)
         slot.appendChild(flunkyball)
         slot.appendChild(beerpong)
         slot.appendChild(flipcup)
         slot.appendChild(gesamt)
         var ausw = "auswertungen" 
         document.getElementById(ausw).appendChild(slot)
-        
-        }
     
     }
-
+}
 fetchDataGesamt(31,0)

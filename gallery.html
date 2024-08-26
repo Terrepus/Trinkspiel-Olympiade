@@ -3,6 +3,8 @@
 <head>
     <title>TrinkSpielOlympiade</title>
     <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 <body>
     <header>
@@ -10,7 +12,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallerie</a></li>
             <li><a href="wertung_gesamt.html">Wertungen</a></li>
-            <li><a>Brackets</a></li>
+            <!--<li><a>Brackets</a></li>-->
         </ul>
         
     </header>
@@ -30,6 +32,11 @@
             <div class="column" id="olymp_1"></div>
             <div class="column" id="olymp_2"></div>
             <div class="column" id="olymp_3"></div>            
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick=closeModal()>&times;</span>
+            <img class="modal-content" id="imgModal">
         </div>
     </section>
     <!--
@@ -59,6 +66,6 @@
         </div>
     </section>-->
     <script src="scripts/gallery.js"></script>
-    
+    <script src="scripts/modal.js"></script>
 </body>
 </html>

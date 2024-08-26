@@ -3,7 +3,9 @@
     <head>
         <title>TrinkSpielOlympiade</title>
         <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/auswertung.css">    
+        <link rel="stylesheet" href="styles/auswertung.css">
+        <link rel="stylesheet" href="styles/profilepic.css">
+        <link rel="stylesheet" href="styles/modal.css">    
     </head>
     <body>
         <header>
@@ -11,7 +13,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallerie</a></li>
                 <li><a href="wertung_gesamt.html">Wertungen</a></li>
-                <li><a>Brackets</a></li>
+                <!--<li><a>Brackets</a></li>-->
             </ul>
             
         </header>
@@ -21,11 +23,15 @@
                 <li><a href="wertungen.html">Olympiaden</a></li>
             </ul>
         </nav>
+        <p class="mobile_only">
+            Für ein besseres Erlebnis, Handy in Landscape (Seitwärts) verwenden.
+        </p>
         <div class="table_body">
             <div class="table">
                 <div class="table_header" >
                     <h3 id="title">Trinkspiel-Olympiade 2023</h3>
                 </div>
+                
                 <div class="table_content">
                     <table class="table table-sortable">
                         <thead>
@@ -38,83 +44,19 @@
                                 <th onclick=fetchDataGesamt(31,0)>Gesamt<img src="images\no_background/logo_alle.png" style="padding-left: 6px;"></th>
                             </tr>
                         </thead>
-                        <tbody id="auswertungen">
-
+                        <tbody id="auswertungen">                            
+                            
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        <!--
-        <div class="table_body">
-            <div class="table">
-                <div class="table_header">
-                    <h3>Trinkspiel-Olympiade 2022</h3>
-                </div>
-                <div class="table_content">
-                    <table>
-                        <thead>
-                            <th>Platzierung</th>
-                            <th>Teams</th>
-                            <th>Flunkyball</th>
-                            <th>Beerpong</th>
-                            <th>Flipcup</th>
-                            <th>Gesamt</th>
-                        </thead>
-                        <tbody id="auswertungen_2022">
-                           
-                        </tbody>
-                    </table>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick=closeModal()>&times;</span>
+                    <img class="modal-content" id="imgModal">
                 </div>
             </div>
         </div>
-        <div class="table_body">
-            <div class="table">
-                <div class="table_header">
-                    <h3>Trinkspiel-Olympiade 2021</h3>
-                </div>
-                <div class="table_content">
-                    <table >
-                        <thead>
-                            <th>Platzierung</th>
-                            <th>Teams</th>
-                            <th>Flunkyball<img src="images\no_background/flunkyball.png" style="scale: 1.4;"/></th>
-                            <th>Beerpong</th>
-                            <th>Flipcup</th>
-                            <th>Gesamt</th>
-
-                        </thead>
-                        <tbody id="auswertungen_2021">
-                           
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="table_body">
-            <div class="table">
-                <div class="table_header">
-                    <h3>Trinkspiel-Olympiade 2020</h3>
-                </div>
-                <div class="table_content">
-                    <table>
-                        <thead>
-                            <th>Platzierung</th>
-                            <th>Teams</th>
-                            <th>Flunkyball</th>
-                            <th>Beerpong</th>
-                            <th>Flipcup</th>
-                            <th>Gesamt</th>
-
-                        </thead>
-                        <tbody id="auswertungen_2020">
-                           
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    -->
+        
         <script async="true" src="scripts/auswertung_gesamt.js"></script>
+        <script src="scripts/modal.js"></script>
     </body>
 </html>
