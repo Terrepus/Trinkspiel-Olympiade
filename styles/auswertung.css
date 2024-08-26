@@ -87,22 +87,6 @@ tbody tr:nth-child(3){
 }
 
 @media screen {
-    body.mobile{
-        background: rgb(59, 12, 231);
-    }
-
-    body.mobile header{
-        height:150px
-    }
-
-    body.mobile header li{
-        margin-top:100px
-    }
-
-    body.mobile header a{
-        font-size: x-large;
-    }
-
     body.mobile p.mobile_only{
         display:block;
         text-align: center;

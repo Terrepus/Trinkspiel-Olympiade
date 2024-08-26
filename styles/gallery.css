@@ -21,23 +21,7 @@
     transform: scale(1.1);
 }
 
-@media screen {
-    body.mobile{
-        background: rgb(59, 12, 231);
-    }
-
-    body.mobile header{
-        height:150px
-    }
-
-    body.mobile header li{
-        margin-top:100px
-    }
-
-    body.mobile header a{
-        font-size: x-large;
-    }
-
+@media screen {  
     body.mobile nav{
         font-size: x-large;
         font-weight: 600;
