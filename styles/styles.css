@@ -142,7 +142,7 @@ section.feature-box.gesamtauswertung{
 }
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-aspect-ratio:16/9){
     header{
         background-color: gray;
         text-align: center;
@@ -152,7 +152,7 @@ section.feature-box.gesamtauswertung{
     }
 
     header a{
-        font-size: medium;
+        font-size: large;
     }
     ul.header li{
         margin-top: 80px;

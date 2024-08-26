@@ -3,6 +3,10 @@ function openModal(imgElement) {
     var modalImg = document.getElementById("imgModal");
     modal.style.display = "block";
     modalImg.src = imgElement.src;
+
+    modal.onclick = function(){
+        closeModal()
+    }
     /*
     // Calculate the current scroll position
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;

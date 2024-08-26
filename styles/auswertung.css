@@ -86,7 +86,7 @@ tbody tr:nth-child(3){
     background-color: #cd8032a9;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-aspect-ratio:16/9){
     .mobile_only{
         display: block;
         text-align: center;
