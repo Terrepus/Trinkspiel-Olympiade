@@ -3,7 +3,7 @@ function openModal(imgElement) {
     var modalImg = document.getElementById("imgModal");
     modal.style.display = "block";
     modalImg.src = imgElement.src;
-
+    /*
     // Calculate the current scroll position
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -18,6 +18,7 @@ function openModal(imgElement) {
     // Set the modal position
     modal.style.top = (scrollTop + (windowHeight - modalHeight) / 2) + "px";
     modal.style.left = (scrollLeft + (windowWidth - modalWidth) / 2) + "px";
+    */
 }
 
 function closeModal() {
