@@ -19,7 +19,7 @@
         </header>
         <nav >
             <ul>
-                <li onclick=fetchDataGesamt(31)>Gesamtauswertung</li>
+                <li onclick=loadTable(0) >Gesamtauswertung</li>
                 <li><a href="wertungen.html">Olympiaden</a></li>
             </ul>
         </nav>
@@ -30,15 +30,15 @@
                 </div>
                 
                 <div class="table_content">
-                    <table class="table table-sortable">
+                    <table class="table table-sortable" id="auswertungen_table">
                         <thead>
                             <tr>
-                                <th>Platz</th>
-                                <th>Teams</th>
-                                <th onclick=fetchDataGesamt(31,1)>Flunkyball<img src="images\no_background/flunkyball.png"/></th>
-                                <th onclick=fetchDataGesamt(31,2)>Beerpong<img src="images\no_background/beerpong.png" style="padding-left: 6px;"/></th>
-                                <th onclick=fetchDataGesamt(31,3)>Flipcup<img src="images\no_background/flipcup.png"/></th>
-                                <th onclick=fetchDataGesamt(31,0)>Gesamt<img src="images\no_background/logo_alle.png" style="padding-left: 6px;"></th>
+                                <th onclick=sortTable(0) id="platz">Platz</th>
+                                <th onclick=sortTable(1) id="spieler">Spieler</th>
+                                <th onclick=sortTable(2) id="flunkyball">Flunkyball<img src="images\no_background/flunkyball.png"/></th>
+                                <th onclick=sortTable(3) id="beerpong">Beerpong<img src="images\no_background/beerpong.png" style="padding-left: 6px;"/></th>
+                                <th onclick=sortTable(4) id="flipcup">Flipcup<img src="images\no_background/flipcup.png"/></th>
+                                <th onclick=sortTable(0) id="platz">Gesamt<img src="images\no_background/logo_alle.png" style="padding-left: 6px;"></th>
                             </tr>
                         </thead>
                         <tbody id="auswertungen">                            
@@ -55,6 +55,7 @@
         </div>
         
         <script src="scripts/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
         <script async="true" src="scripts/auswertung_gesamt.js"></script>
         <script src="scripts/modal.js"></script>
     </body>

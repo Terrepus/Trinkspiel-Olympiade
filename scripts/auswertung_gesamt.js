@@ -1,91 +1,44 @@
-async function fetchDataGesamt(n,sort=0){
+function fetchAndProcessExcelFile(url) {
+    fetch(url)
+        .then(response => response.arrayBuffer())
+        .then(data => {
+            var workbook = XLSX.read(data, { type: 'array' });
+
+            // Get the first sheet
+            /*
+                7 -> Database - alle olympiaden
+                0 -> Summe_Punkte - Gesamtwertung
+                6 -> Olympiade_6
+                .
+                .
+                1 -> Olympiade_1
+            */
+            var firstSheetName = workbook.SheetNames[0];
+            var worksheet = workbook.Sheets[firstSheetName];
+
+            // Convert the sheet to JSON format
+            var jsonData = XLSX.utils.sheet_to_json(worksheet);
+            displayTable(jsonData)
+
+            // Process the data (e.g., calculate sums, create new tables)
+            
+        })
+        .catch(error => console.error('Error fetching the Excel file:', error));        
+    }
+
+function print(text){
+    console.log(text)
+}
+
+function displayTable(data){
     var element = document.getElementById("auswertungen"); 
     while (element.firstChild) { 
         element.removeChild(element.firstChild); 
          
     }
+    document.getElementById("title").innerHTML = "Gesamtauswertung"  
 
-    document.getElementById("title").innerHTML = "Gesamtauswertung"   
-
-
-    var punkte_url = "./auswertungen/gesamt.txt"
-    let punkte_respone = await fetch(punkte_url);
-    let punkte_data = await punkte_respone.text();
-    punkte_data = punkte_data.replace("flunkyball,beerpong,flipcup","")
-    punkte_data = punkte_data.replaceAll("\r","")
-    var punkte = punkte_data.split("\n")
-
-    var player = new Array()
-    var c = 0
-    for (var i=1;i<n;i++){
-        var maxscore = (n-1)*10
-        var t = punkte[i].split(":")
-        var p = t[0].split("+")
-        var s = t[1].split(",")
-        player[c] = {"player_name":p[0],
-                    "flunky_score":parseInt(s[0]),
-                    "flunky_platz":"" ,
-                    "beerpong_score":parseInt(s[1]),
-                    "beerpong_platz":"",
-                    "flipcup_score":parseInt(s[2]),
-                    "flipcup_platz":"",                    
-                    "gesamt_score":parseInt(s[3]),
-                    "gesamt_platz_score":"",
-                    "gesamt_platz":c+1
-                }
-        c++
-        }
-    if (sort == 1){
-        for (var i=0;i<player.length-1;i++){
-            if(player[i].flunky_score < player[i+1].flunky_score){
-                var tmp = player[i]
-                player[i] = player[i+1]
-                player[i+1] = tmp
-                i=-1
-            }
-        }
-        document.getElementById("title").innerHTML = "Gesamtauswertung - Flunkyball"   
-    }
-
-    if (sort == 2){
-        for (var i=0;i<player.length-1;i++){
-            console.log(player[i])
-            if(player[i].beerpong_score < player[i+1].beerpong_score){
-                var tmp = player[i]
-                player[i] = player[i+1]
-                player[i+1] = tmp
-                i=-1
-            }
-        }
-        document.getElementById("title").innerHTML = "Gesamtauswertung - Beerpong"   
-    }
-
-    if (sort == 3){
-        for (var i=0;i<player.length-1;i++){
-            if(player[i].flipcup_score < player[i+1].flipcup_score){
-                var tmp = player[i]
-                player[i] = player[i+1]
-                player[i+1] = tmp
-                i=-1
-            }
-        }
-        document.getElementById("title").innerHTML = "Gesamtauswertung - Flipcup"   
-    }
-
-    if (sort == 0){
-        for (var i=0;i<player.length-1;i++){
-            if(player[i].gesamt_score < player[i+1].gesamt_score){
-                var tmp = player[i]
-                player[i] = player[i+1]
-                player[i+1] = tmp
-                i=-1
-            }
-        }
-        document.getElementById("title").innerHTML = "Gesamtauswertung"   
-    }
-    
-
-    for (var i = 0; i<n-1; i++){           
+    for (var i = 0; i < data.length ; i++){           
         var slot = document.createElement("tr")
         var rank = document.createElement("td")
         var pic = document.createElement("img")
@@ -97,11 +50,11 @@ async function fetchDataGesamt(n,sort=0){
         var gesamt = document.createElement("td")
         pic.src="images/profilbilder/default.png"        
         
-        var player1_name = player[i].player_name.toLowerCase()
-        pic.src = "images/profilbilder/" + player1_name +".png"
+        var player_name = data[i].Name.toLowerCase()
+        pic.src = "images/profilbilder/" + player_name +".png"
 
         
-        if(player1_name == "mo" || player1_name == "anna" || player1_name == "anton" || player1_name == "jochen" || player1_name == "bruno" || player1_name == "lina" || player1_name == "melli" || player1_name == "charlie" || player1_name == "matthias" || player1_name == "oskar" || player1_name == "basti"){
+        if(player_name == "mo" || player_name == "anna" || player_name == "anton" || player_name == "jochen" || player_name == "bruno" || player_name == "lina" || player_name == "melli" || player_name == "charlie" || player_name == "matthias" || player_name == "oskar" || player_name == "basti"){
             pic.src="images/profilbilder/default.png"
             
         }
@@ -110,14 +63,14 @@ async function fetchDataGesamt(n,sort=0){
             openModal(this);
         };
 
-        rank.innerHTML += player[i].gesamt_platz
+        rank.innerHTML += data[i].Platzierung
         profile.appendChild(pic)
-        name.innerHTML += player[i].player_name
+        name.innerHTML += data[i].Name
         profile.appendChild(name) 
-        flunkyball.innerHTML += player[i].flunky_score 
-        beerpong.innerHTML += player[i].beerpong_score 
-        flipcup.innerHTML += player[i].flipcup_score 
-        gesamt.innerHTML +=  player[i].gesamt_score 
+        flunkyball.innerHTML += data[i].Flunkyball 
+        beerpong.innerHTML += data[i].Beerpong
+        flipcup.innerHTML += data[i].Flipcup
+        gesamt.innerHTML +=  data[i].Gesamtpunkte 
 
         slot.appendChild(rank)
         slot.appendChild(profile)
@@ -127,7 +80,64 @@ async function fetchDataGesamt(n,sort=0){
         slot.appendChild(gesamt)
         var ausw = "auswertungen" 
         document.getElementById(ausw).appendChild(slot)
-    
-    }
+
+
+        }
+    }   
+function loadTable(){
+    fetchAndProcessExcelFile("./auswertungen/olympiaden.xlsx")
 }
-fetchDataGesamt(31,0)
+loadTable()
+
+function sortTable(sort){
+    const table = document.getElementById("auswertungen_table")
+    var sortID = ""
+    var columnIndex = 0
+    switch (sort){
+        case 0:
+            sortID="platz"
+            columnIndex = 0
+            break;
+        case 1:
+            sortID = "spieler"
+            columnIndex = 1
+            break;
+        case 2:
+            sortID = "flunkyball"
+            columnIndex = 2
+            break;
+        case 3:
+            sortID = "beerpong"
+            columnIndex = 3
+            break;
+        case 4:
+            sortID = "flipcup"
+            columnIndex = 4
+            break;
+        default:
+            sortID="platz"
+            columnIndex = 0
+    }
+    const id = document.getElementById(sortID)
+    const rows = Array.from(table.querySelectorAll('tbody tr'))
+    const tbody = table.querySelector('tbody');
+    
+    const sortedRows = rows.sort((a, b) => {
+        const aText = a.cells[columnIndex].textContent.trim();
+        const bText = b.cells[columnIndex].textContent.trim();
+        
+        // Convert text content to number if possible
+        const aValue = isNaN(aText) ? aText : parseFloat(aText);
+        const bValue = isNaN(bText) ? bText : parseFloat(bText);
+        if (columnIndex == 0 || columnIndex == 1){
+            return aValue > bValue ? 1 : (aValue < bValue ? -1 : 0);
+        }
+        else{
+            return aValue < bValue ? 1 : (aValue > bValue ? -1 : 0);
+        }
+        
+    });
+
+    tbody.innerHTML = ' ';
+    sortedRows.forEach(row => tbody.appendChild(row));
+}

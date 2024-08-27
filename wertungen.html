@@ -20,12 +20,12 @@
         <nav>
             <ul>
                 <li><a href="wertung_gesamt.html">Gesamtauswertung</a></li>
-                <li onclick=fetchDataOlympiade(6,10)>Olympiade 6</li>
-                <li onclick=fetchDataOlympiade(5,9)>Olympiade 5</li>
-                <li onclick=fetchDataOlympiade(4,6)>Olympiade 4</li>
-                <li onclick=fetchDataOlympiade(3,6)>Olympiade 3</li>
-                <li onclick=fetchDataOlympiade(2,7)>Olympiade 2</li>
-                <li onclick=fetchDataOlympiade(1,5)>Olympiade 1</li>
+                <li onclick=loadTable(6)>Olympiade 6</li>
+                <li onclick=loadTable(5)>Olympiade 5</li>
+                <li onclick=loadTable(4)>Olympiade 4</li>
+                <li onclick=loadTable(3)>Olympiade 3</li>
+                <li onclick=loadTable(2)>Olympiade 2</li>
+                <li onclick=loadTable(1)>Olympiade 1</li>
             </ul>
         </nav>
         <div class="table_body">
@@ -34,15 +34,15 @@
                     <h3 id="title">Trinkspiel-Olympiade 2023</h3>
                 </div>
                 <div class="table_content">
-                    <table class="table table-sortable">
+                    <table class="table table-sortable" id="auswertungen_table">
                         <thead>
                             <tr>
-                                <th>Platz</th>
-                                <th>Teams</th>
-                                <th onclick=fetchDataOlympiade(0,0,1)>Flunkyball<img src="images\no_background/flunkyball.png"/></th>
-                                <th onclick=fetchDataOlympiade(0,0,2)>Beerpong<img src="images\no_background/beerpong.png" style="padding-left: 6px;"/></th>
-                                <th onclick=fetchDataOlympiade(0,0,3)>Flipcup<img src="images\no_background/flipcup.png"/></th>
-                                <th onclick=fetchDataOlympiade(0,0,0)>Gesamt<img src="images\no_background/logo_alle.png" style="padding-left: 6px;"></th>
+                                <th onclick=sortTable(0) id="platz">Platz</th>
+                                <th onclick=sortTable(1) id="spieler">Team</th>
+                                <th onclick=sortTable(2) id="flunkyball">Flunkyball<img src="images\no_background/flunkyball.png"/></th>
+                                <th onclick=sortTable(3) id="beerpong">Beerpong<img src="images\no_background/beerpong.png" style="padding-left: 6px;"/></th>
+                                <th onclick=sortTable(4) id="flipcup">Flipcup<img src="images\no_background/flipcup.png"/></th>
+                                <th onclick=sortTable(0) id="platz">Gesamt<img src="images\no_background/logo_alle.png" style="padding-left: 6px;"></th>
                             </tr>
                         </thead>
                         <tbody id="auswertungen">
@@ -58,6 +58,7 @@
             <img class="modal-content" id="imgModal">
         </div>
         <script src="scripts/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
         <script async="true" src="scripts/auswertung_olympiade.js"></script>
         <script src="scripts/modal.js"></script>
     </body>
