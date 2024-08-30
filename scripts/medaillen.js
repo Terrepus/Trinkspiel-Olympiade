@@ -75,7 +75,7 @@ function displayTable(data,discipline){
         pic.src = "images/profilbilder/" + player_name +".png"
 
         
-        if(player_name == "mo" || player_name == "anna" || player_name == "anton" || player_name == "jochen" || player_name == "bruno" || player_name == "lina" || player_name == "melli" || player_name == "charlie" || player_name == "matthias" || player_name == "oskar" || player_name == "basti"){
+        if(player_name == "anna" || player_name == "jochen" || player_name == "lina"){
             pic.src="images/profilbilder/default.png"
             
         }
@@ -141,6 +141,7 @@ function loadTable(discipline){
 }
 loadTable(0)
 
+
 function sortTable(sort){
     const table = document.getElementById("auswertungen_table")
     var sortID = ""
@@ -193,3 +194,5 @@ function sortTable(sort){
     tbody.innerHTML = ' ';
     sortedRows.forEach(row => tbody.appendChild(row));
 }
+
+sortTable(2)

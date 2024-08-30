@@ -59,10 +59,10 @@ function displayTable(data,olympiade){
         pic1.src = "images/profilbilder/" + player1_name +".png"
         pic2.src = "images/profilbilder/" + player2_name +".png"
         
-        if(player1_name == "mo" || player1_name == "anna" || player1_name == "anton" || player1_name == "jochen" || player1_name == "bruno" || player1_name == "lina" || player1_name == "melli" || player1_name == "charlie" || player1_name == "matthias" || player1_name == "oskar" || player1_name == "basti"){
+        if(player1_name == "anna" || player1_name == "jochen" || player1_name == "lina" ){
             pic1.src="images/profilbilder/default.png"
         }
-        if(player2_name == "mo" || player2_name == "anna" || player2_name == "anton" || player2_name == "jochen" || player2_name == "bruno" || player2_name == "lina" || player2_name == "melli" || player2_name == "charlie" || player2_name == "matthias" || player2_name == "oskar" || player2_name == "basti"){
+        if(player2_name == "anna" || player2_name == "jochen" || player2_name == "lina" ){
             pic2.src="images/profilbilder/default.png"
         }
         if (olympiade == 2 && i == 5){
@@ -70,7 +70,7 @@ function displayTable(data,olympiade){
             var pic3 = document.createElement("img")
             var player3_name = data[i].Name.toLowerCase()
             pic3.src = "images/profilbilder/" + player2_name +".png"
-            if(player3_name == "mo" || player3_name == "anna" || player3_name == "anton" || player3_name == "jochen" || player3_name == "bruno" || player3_name == "lina" || player3_name == "melli" || player3_name == "charlie" || player3_name == "matthias" || player3_name == "oskar" || player3_name == "basti"){
+            if(player3_name == "anna" || player3_name == "jochen" || player3_name == "lina"){
                 pic3.src="images/profilbilder/default.png"
             }
             name.innerHTML += " & " + data[i].Name
