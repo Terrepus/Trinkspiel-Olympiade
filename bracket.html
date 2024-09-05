@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>TrinkSpielOlympiade</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/brackets.css">  
+    </head>
+    <body>
+        <header>
+            <ul class="header">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallerie</a></li>
+                <li><a href="wertung_gesamt.html">Wertungen</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>                
+                <li onclick=loadBracket(1)>Flunkyball</li>
+                <li onclick=loadBracket(2)>Beerpong</li>
+                <li onclick=loadBracket(3)>Flipcup</li>
+            </ul>
+        </nav>
+        
+         
+        <section>
+            <h1 id ="bracket_title">Flunkyball Olympiade 7</h1>
+            <h2>Winner Bracket</h2>
+            <main id="tournament-winner">                
+                <ul class="round round-1">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1w11"> <span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1w12"> <span> </span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top "  id="r1w21"> <span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1w22"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1w31"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1w32"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1w41"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1w42"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>                  
+                    
+                </ul>
+                <ul class="round round-2">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r2w11"> <span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r2w12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r2w21"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r2w22"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                </ul>
+                <ul class="round round-3">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r3w11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r3w12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                </ul>
+                <ul class="round round-4">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r4w11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r4w12"><span></span></li>  
+                                     
+                    
+                </ul>   
+                <ul class="round round-5">
+                    <li class="spacer">&nbsp;</li>
+                    <li class="game game-top winner"  id="r5w"><span></span></li>                    
+                    <li class="spacer">&nbsp;</li>
+                </ul>
+            </main>
+            <br>
+        </section>
+        <section>
+            <h2>Loser Bracket</h2>
+            <main id="tournament-loser">
+                <ul class="round round-1">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1l11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1l12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1l21"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1l22"><span></span></li>
+                    <li class="spacer">&nbsp;</li>
+                    
+                    
+                    
+                </ul>
+                
+                <ul class="round round-2">
+                    
+                    <li class="game game-top " id="r2l11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>                    
+                    <li class="game game-bottom " id="r2l12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    <br>
+                    <li class="game game-top " id="r2l21"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom "  id="r2l22"><span></span></li>
+                    
+                    
+                </ul>
+                <ul class="round round-3">
+                    <li class="game spacer">&nbsp;</li>
+
+                    <li class="game game-top " id="r3l11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r3l12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                </ul>
+                <ul class="round round-4">
+                    <li class="game spacer">&nbsp;</li>
+                    <li class="game spacer">&nbsp;</li>
+                    <li class="game game-top " id="r4l11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    
+                    <li class="game game-bottom " id="r4l12"><span></span></li>
+                    
+                </ul>
+                <ul class="round round-5">
+                    <li class="spacer">&nbsp;</li>
+                    <li class="game game-top winner" id="r5l"><span></span></li>                    
+                    
+                </ul>   
+            </main>
+            <br> 
+        </section>
+        <section>
+            <h2>Loser-Loser Bracket</h2>
+            <main id="tournament-loser-loser">
+                <ul class="round round-1">
+                    <li class="spacer">&nbsp;</li>
+                    
+                    <li class="game game-top " id="r1ll11"><span></span></li>
+                    <li class="game game-spacer">&nbsp;</li>
+                    <li class="game game-bottom " id="r1ll12"><span></span></li>
+
+                    <li class="spacer">&nbsp;</li>
+                    
+                </ul>
+                
+                <ul class="round round-2">
+                    <li class="game game-top winner" id="r2ll"><span></span></li>
+                </ul>
+
+                <ul class="round round-3">                  
+                </ul>
+
+                <ul class="round round-4">
+                    <li class="game game-top " id="r4ll11"><span></span></li>
+                    <li class="game game-spacer" style="flex-grow:.1">&nbsp;</li>
+                    <li class="game game-bottom " id="r4ll12"><span></span></li>                  
+                </ul>
+                <ul class="round round-5">
+                    
+                    <li class="game game-top winner" id="r5ll"><span></span></li>
+                    
+                </ul>
+                
+            </main>
+            <br> 
+        </section>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/brackets.js"></script>
+    </body>
+</html>
