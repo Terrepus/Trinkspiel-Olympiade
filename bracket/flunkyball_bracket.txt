@@ -1,7 +1,7 @@
 Winner Bracket (gewinner bekommt noch eine 1 hinten dran)
-r1w11;Test;Jonas
+r1w11;
 r1w12;
-r1w21;atest2;Jason
+r1w21;
 r1w22;
 r1w31;
 r1w32;
