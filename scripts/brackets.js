@@ -1,14 +1,14 @@
 function fetchAndProcessTxTFile(url,discipline) {
     if (discipline == 1){
-        url = "/bracket/flunkyball/flunkyball_bracket.txt"
+        url = "/bracket/flunkyball_bracket.txt"
         document.getElementById("bracket_title").innerHTML="Flunkyball Olympiade 7"
     }
     else if(discipline == 2){
-        url = "/bracket/beerpong/beerpong_bracket.txt"
+        url = "/bracket/beerpong_bracket.txt"
         document.getElementById("bracket_title").innerHTML="Beerpong Olympiade 7"
     }
     else if(discipline == 3){
-        url = "/bracket/flipcup/flipcup_bracket.txt"
+        url = "/bracket/flipcup_bracket.txt"
         document.getElementById("bracket_title").innerHTML="Flipcup Olympiade 7"
     }
     fetch(url)
