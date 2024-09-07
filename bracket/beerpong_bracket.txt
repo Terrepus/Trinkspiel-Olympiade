@@ -33,7 +33,7 @@ r2l21;Georg;Melli
 r2l22;Jannes;Marc
 -
 r3l11;Anton;Moritz
-r3l12;
+r3l12;Melli;Georg
 -
 r4l11;
 r4l12;
@@ -47,6 +47,6 @@ r1ll12;Bruno;Oskar
 r2ll;Bruno;Oskar
 -
 r4ll11;Till;Jason
-r4ll12;
+r4ll12;Jannes;Marc
 -
 r5ll;
