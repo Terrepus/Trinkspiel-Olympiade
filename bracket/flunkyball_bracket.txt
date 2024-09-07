@@ -2,7 +2,7 @@ Winner Bracket
 r1w11;Anton;Moritz
 r1w12;Jason;Till
 r1w21;Siggi;Richard
-r1w22;Bruno;Oskar;
+r1w22;Bruno;Oskar
 r1w31;Hannah;Amelie
 r1w32;Theo;Jonas
 r1w41;Melli;Georg
