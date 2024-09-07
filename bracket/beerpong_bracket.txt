@@ -22,7 +22,7 @@ r4w12;
 r5w;
 
 Loser Bracket
-r1l11;Anton;Morotz
+r1l11;Anton;Moritz
 r1l12;Hannah;Amelie
 r1l21;Jannes;Marc
 r1l22;Bruno;Oskar
