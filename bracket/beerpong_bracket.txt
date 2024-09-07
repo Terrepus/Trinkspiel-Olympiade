@@ -11,10 +11,10 @@ r1w42;Theo;Jonas;1
 r2w11;Georg;Melli
 r2w12;Siggi;Richard;1
 r2w21;Jason;Till
-r2w22;Jonas;Theo
+r2w22;Jonas;Theo;1
 -
 r3w11;Siggi;Richard
-r3w12;
+r3w12;Theo;Jonas
 -
 r4w11;
 r4w12;
@@ -27,10 +27,10 @@ r1l12;Hannah;Amelie
 r1l21;Jannes;Marc
 r1l22;Bruno;Oskar
 -
-r2l11;
+r2l11;Till;Jason
 r2l12;Anton;Moritz
 r2l21;Georg;Melli
-r2l22;
+r2l22;Jannes;Marc
 -
 r3l11;
 r3l12;
