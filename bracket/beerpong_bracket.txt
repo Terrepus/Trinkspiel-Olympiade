@@ -22,14 +22,14 @@ r4w12;
 r5w;
 
 Loser Bracket
-r1l11;Anton;Moritz
+r1l11;Anton;Moritz;1
 r1l12;Hannah;Amelie
 r1l21;Jannes;Marc
 r1l22;Bruno;Oskar
 -
 r2l11;
-r2l12;
-r2l21;
+r2l12;Anton;Moritz
+r2l21;Georg;Melli
 r2l22;
 -
 r3l11;
@@ -41,7 +41,7 @@ r4l12;
 r5l;
 
 Loser Loser Bracket
-r1ll11;
+r1ll11;Hannah;Amelie
 r1ll12;
 -
 r2ll;
