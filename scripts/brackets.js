@@ -49,7 +49,7 @@ function createBracket(data){
                     element.innerHTML=team[1].toString() + " & " + team[2].toString()
                 }
             }
-if(element.classList.contains("game-top){
+if(element.classList.contains("game-top"){
 element.className="game game-top"
 }
 if(element.classList.contains("game-bottom){
