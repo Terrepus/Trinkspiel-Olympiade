@@ -41,7 +41,7 @@ r4l12;Richard;Siggi
 r5l;
 
 Loser Loser Bracket
-r1ll11;Jason;Till:1
+r1ll11;Jason;Till;1
 r1ll12;Hannah;Amelie
 -
 r2ll;Jason;Till
