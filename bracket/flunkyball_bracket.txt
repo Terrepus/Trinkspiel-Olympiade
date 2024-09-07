@@ -28,12 +28,12 @@ r1l21;Hannah;Amelie
 r1l22;Jannes;Marc;1
 -
 r2l11;Melli;Georg
-r2l12;Siggi;Richard
+r2l12;Siggi;Richard;1
 r2l21;Jannes;Marc
 r2l22;Anton;Moritz
 -
-r3l11;
-r3l12;
+r3l11;Richard;Siggi
+r3l12;Jannes;Marc
 -
 r4l11;
 r4l12;
@@ -41,12 +41,12 @@ r4l12;
 r5l;
 
 Loser Loser Bracket
-r1ll11;Jason;Till
+r1ll11;Jason;Till:1
 r1ll12;Hannah;Amelie
 -
-r2ll;
+r2ll;Jason;Till
 -
-r4ll11;
-r4ll12;
+r4ll11;Melli;Georg
+r4ll12;Anton;Moritz
 -
 r5ll;
