@@ -33,7 +33,7 @@ function loadBracket(discipline){
     fetchAndProcessTxTFile("",discipline)
 }
 
-loadBracket(1)
+loadBracket(2)
 
 function createBracket(data){
     var data_array = data.split("\n")
