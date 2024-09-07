@@ -10,8 +10,8 @@ r1w42;Jannis;Marc
 -
 r2w11;Anton;Moritz
 r2w12;Bruno;Oskar
-r2w21;
-r2w22;
+r2w21;Theo;Jonas
+r2w22;Melli;Georg
 -
 r3w11;
 r3w12;
@@ -23,9 +23,9 @@ r5w;
 
 Loser Bracket
 r1l11;Jason;Till
-r1l12;Siggi;Richard
-r1l21;
-r1l22;
+r1l12;Siggi;Richard;1
+r1l21;Hannah;Amelie
+r1l22;Jannes;Marc
 -
 r2l11;
 r2l12;
@@ -41,7 +41,7 @@ r4l12;
 r5l;
 
 Loser Loser Bracket
-r1ll11;
+r1ll11;Jason;Till
 r1ll12;
 -
 r2ll;
