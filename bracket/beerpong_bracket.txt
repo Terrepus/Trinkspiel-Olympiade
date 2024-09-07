@@ -42,9 +42,9 @@ r5l;
 
 Loser Loser Bracket
 r1ll11;Hannah;Amelie
-r1ll12;
+r1ll12;Bruno;Oskar
 -
-r2ll;
+r2ll;Bruno;Oskar
 -
 r4ll11;
 r4ll12;
