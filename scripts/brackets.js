@@ -44,17 +44,18 @@ function createBracket(data){
             
             if (team.length>=2){                
                 element.innerHTML=""
+if(element.classList.contains("game-top"){
+element.className="game game-top"
+}
+if(element.classList.contains("game-bottom"){
+element.className="game game-bottom"
+}
+
                 if (team.length>2){
                     print(team.length)
                     element.innerHTML=team[1].toString() + " & " + team[2].toString()
                 }
             }
-if(element.classList.contains("game-top"){
-element.className="game game-top"
-}
-if(element.classList.contains("game-bottom){
-element.className="game game-bottom"
-}
 
 
             if (team.length>3){
