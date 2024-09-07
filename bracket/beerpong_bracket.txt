@@ -22,9 +22,9 @@ r4w12;
 r5w;
 
 Loser Bracket
-r1l11;Jannes;Marc
-r1l12;
-r1l21;
+r1l11;Anton;Morotz
+r1l12;Hannah;Amelie
+r1l21;Jannes;Marc
 r1l22;
 -
 r2l11;
