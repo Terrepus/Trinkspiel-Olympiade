@@ -1,15 +1,15 @@
 Winner Bracket 
-r1w11;Anton;Moritz
+r1w11;Anton;Moritz;1
 r1w12;Jason;Till
 r1w21;Siggi;Richard
-r1w22;Bruno;Oskar
+r1w22;Bruno;Oskar;1
 r1w31;Hannah;Amelie
 r1w32;Theo;Jonas
 r1w41;Melli;Georg
 r1w42;Jannis;Marc
 -
-r2w11;
-r2w12;
+r2w11;Anton;Moritz
+r2w12;Bruno;Oskar
 r2w21;
 r2w22;
 -
@@ -22,8 +22,8 @@ r4w12;
 r5w;
 
 Loser Bracket
-r1l11;
-r1l12;
+r1l11;Jason;Till
+r1l12;Siggi;Richard
 r1l21;
 r1l22;
 -
