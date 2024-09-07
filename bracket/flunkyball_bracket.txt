@@ -14,9 +14,9 @@ r2w21;Theo;Jonas;1
 r2w22;Melli;Georg
 -
 r3w11;Bruno;Oskar
-r3w12;Theo;Jonas
+r3w12;Theo;Jonas;1
 -
-r4w11;
+r4w11;Theo;Jonas
 r4w12;
 -
 r5w;
@@ -35,7 +35,7 @@ r2l22;Anton;Moritz
 r3l11;Richard;Siggi
 r3l12;Jannes;Marc
 -
-r4l11;
+r4l11;Bruno;Oskar
 r4l12;
 -
 r5l;
