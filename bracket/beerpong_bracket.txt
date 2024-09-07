@@ -9,11 +9,11 @@ r1w41;Bruno;Oskar
 r1w42;Theo;Jonas;1
 -
 r2w11;Georg;Melli
-r2w12;Siggi;Richard
+r2w12;Siggi;Richard;1
 r2w21;Jason;Till
 r2w22;Jonas;Theo
 -
-r3w11;
+r3w11;Siggi;Richard
 r3w12;
 -
 r4w11;
