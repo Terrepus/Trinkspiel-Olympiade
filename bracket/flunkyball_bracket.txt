@@ -32,11 +32,11 @@ r2l12;Siggi;Richard;1
 r2l21;Jannes;Marc;1
 r2l22;Anton;Moritz
 -
-r3l11;Richard;Siggi
+r3l11;Richard;Siggi;1
 r3l12;Jannes;Marc
 -
 r4l11;Bruno;Oskar
-r4l12;
+r4l12;Richard;Siggi
 -
 r5l;
 
