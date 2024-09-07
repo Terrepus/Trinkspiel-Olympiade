@@ -1,12 +1,12 @@
-Winner Bracket (gewinner bekommt noch eine 1 hinten dran)
-r1w11;
-r1w12;
-r1w21;
-r1w22;
-r1w31;
-r1w32;
-r1w41;
-r1w42;
+Winner Bracket 
+r1w11;Anton;Moritz
+r1w12;Jason;Till
+r1w21;Siggi;Richard
+r1w22;Bruno;Oskar;
+r1w31;Hannah;Amelie
+r1w32;Theo;Jonas
+r1w41;Melli;Georg
+r1w42;Jannis;Marc
 -
 r2w11;
 r2w12;
