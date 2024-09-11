@@ -13,40 +13,40 @@ r2w12;Siggi;Richard;1
 r2w21;Jason;Till
 r2w22;Jonas;Theo;1
 -
-r3w11;Siggi;Richard
+r3w11;Siggi;Richard;1
 r3w12;Theo;Jonas
 -
-r4w11;
-r4w12;
+r4w11;Siggi;Richard;1
+r4w12;Melli;Georg
 -
-r5w;
+r5w;Siggi;Richard
 
 Loser Bracket
 r1l11;Anton;Moritz;1
 r1l12;Hannah;Amelie
-r1l21;Jannes;Marc
+r1l21;Jannes;Marc;1
 r1l22;Bruno;Oskar
 -
 r2l11;Till;Jason
 r2l12;Anton;Moritz;1
-r2l21;Georg;Melli
+r2l21;Georg;Melli;1
 r2l22;Jannes;Marc
 -
 r3l11;Anton;Moritz
-r3l12;Melli;Georg
+r3l12;Melli;Georg;1
 -
-r4l11;
-r4l12;
+r4l11;Theo;Jonas
+r4l12;Melli;Georg;1
 -
-r5l;
+r5l;Melli;Georg
 
 Loser Loser Bracket
 r1ll11;Hannah;Amelie
-r1ll12;Bruno;Oskar
+r1ll12;Bruno;Oskar;1
 -
 r2ll;Bruno;Oskar
 -
-r4ll11;Till;Jason
+r4ll11;Till;Jason;1
 r4ll12;Jannes;Marc
 -
-r5ll;
+r5ll;Till;Jason;1

@@ -19,6 +19,9 @@ async function loadgallery(olympiade){
 
     document.getElementById("title").innerHTML = "Trinkspiel-Olympiade " + olympiade
     switch(olympiade){
+        case 7:
+            n=47
+            break
         case 6:
             n=199
             break
@@ -83,6 +86,7 @@ async function loadgallery(olympiade){
 }
 
 async function loadmoregallery(olympiade){
+    /*
     var element_1 = document.getElementById("olymp_1"); 
     var element_2 = document.getElementById("olymp_2"); 
     var element_3 = document.getElementById("olymp_3"); 
@@ -95,12 +99,16 @@ async function loadmoregallery(olympiade){
     while ( element_3.firstChild) { 
         element_3.removeChild(element_3.firstChild); 
     }
+        */
     var count = 0;
 
     document.getElementById("title").innerHTML = "Trinkspiel-Olympiade " + olympiade
     switch(olympiade){
+        case 7:
+            n=77
+            break
         case 6:
-            n=199
+            n=229
             break
         case 5:
             n=0
@@ -123,7 +131,7 @@ async function loadmoregallery(olympiade){
     if (n >= 30){
         n = n-30
     }
-    for (var i=1; i<=n;i++ ){
+    for (var i=30; i<=n;i++ ){
         var img = document.createElement("img")
         var box = document.createElement("div")
         //img.src = "images/olympiade_1/olymp_1 " + "(" + i + ").jpg" 
@@ -145,9 +153,8 @@ async function loadmoregallery(olympiade){
             count=-1;
         }
         count++;
-    }
-    
+    }    
 }
 
  
-loadgallery(6)
+loadgallery(7)

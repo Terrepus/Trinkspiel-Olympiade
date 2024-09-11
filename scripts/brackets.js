@@ -33,20 +33,27 @@ function loadBracket(discipline){
     fetchAndProcessTxTFile("",discipline)
 }
 
-loadBracket(2)
+loadBracket(3)
 
 function createBracket(data){
     var data_array = data.split("\n")
+    
     for(let i = 0;i<data_array.length;i++){
         if (data_array [i].length>2){
             var team = data_array[i].split(";")
             var element = document.getElementById(team[0]);
-            
             if (team.length>=2){                
                 element.innerHTML=""
                 if (team.length>2){
                     print(team.length)
                     element.innerHTML=team[1].toString() + " & " + team[2].toString()
+                }
+                
+                if (element.classList.contains("game-top")){
+                    element.className="game game-top"
+                }
+                if (element.classList.contains("game-bottom")){
+                    element.className="game game-bottom"
                 }
             }
             if (team.length>3){

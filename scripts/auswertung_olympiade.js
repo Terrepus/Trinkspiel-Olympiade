@@ -125,7 +125,7 @@ function displayTable(data,olympiade){
 function loadTable(olympiade){
     fetchAndProcessExcelFile("./auswertungen/olympiaden.xlsx",olympiade)
 }
-loadTable(6)
+loadTable(7)
 
 function sortTable(sort){
     const table = document.getElementById("auswertungen_table")

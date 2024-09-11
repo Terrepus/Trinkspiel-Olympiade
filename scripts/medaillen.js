@@ -14,7 +14,7 @@ function fetchAndProcessExcelFile(url,discipline) {
                 .
                 1 -> Olympiade_1
             */
-            var firstSheetName = workbook.SheetNames[8];
+            var firstSheetName = workbook.SheetNames[9];
             var worksheet = workbook.Sheets[firstSheetName];
 
             // Convert the sheet to JSON format
@@ -133,14 +133,8 @@ function displayTable(data,discipline){
         var ausw = "auswertungen" 
         document.getElementById(ausw).appendChild(slot)
 
-
         }
     }   
-function loadTable(discipline){
-    fetchAndProcessExcelFile("./auswertungen/olympiaden.xlsx",discipline)
-}
-loadTable(0)
-
 
 function sortTable(sort){
     const table = document.getElementById("auswertungen_table")
@@ -194,5 +188,8 @@ function sortTable(sort){
     tbody.innerHTML = ' ';
     sortedRows.forEach(row => tbody.appendChild(row));
 }
-
-sortTable(2)
+function loadTable(discipline){
+    fetchAndProcessExcelFile("./auswertungen/olympiaden.xlsx",discipline)
+    sortTable(2)
+}
+loadTable(0)

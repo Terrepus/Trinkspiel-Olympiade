@@ -29,8 +29,8 @@ r1l22;Jannes;Marc;1
 -
 r2l11;Melli;Georg
 r2l12;Siggi;Richard;1
-r2l21;Jannes;Marc;1
-r2l22;Anton;Moritz
+r2l21;Anton;Moritz
+r2l22;Jannes;Marc;1
 -
 r3l11;Richard;Siggi;1
 r3l12;Jannes;Marc
