@@ -45,7 +45,6 @@ function createBracket(data){
             if (team.length>=2){                
                 element.innerHTML=""
                 if (team.length>2){
-                    print(team.length)
                     element.innerHTML=team[1].toString() + " & " + team[2].toString()
                 }
                 
