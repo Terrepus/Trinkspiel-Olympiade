@@ -17,7 +17,7 @@ r3w11;Bruno;Oskar
 r3w12;Theo;Jonas;1
 -
 r4w11;Theo;Jonas
-r4w12;Richard;Siggi
+r4w12;Richard;Siggi;1
 -
 r5w;Richard;Siggi
 
