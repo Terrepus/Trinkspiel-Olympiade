@@ -13,7 +13,7 @@ function fetchAndProcessExcelFile(url) {
                 .
                 1 -> Olympiade_1
             */
-            var firstSheetName = workbook.SheetNames[0];
+            var firstSheetName = workbook.SheetNames[8]; //Durchschnitt
             var worksheet = workbook.Sheets[firstSheetName];
 
             // Convert the sheet to JSON format
@@ -63,21 +63,17 @@ function displayTable(data){
             openModal(this);
         };
 
-        rank.innerHTML += data[i].Platzierung
+        rank.innerHTML += data[i].Durchschnittsplatzierung
         profile.appendChild(pic)
         name.innerHTML += data[i].Name
         profile.appendChild(name) 
-        flunkyball.innerHTML += data[i].Flunkyball 
-        beerpong.innerHTML += data[i].Beerpong
-        flipcup.innerHTML += data[i].Flipcup
-        gesamt.innerHTML +=  data[i].Gesamtpunkte 
+        teilgenommen.innerHTML += data[i].Teilgenommen 
+        durchschnittswert.innerHTML +=  data[i].Durchschnittswert 
 
         slot.appendChild(rank)
         slot.appendChild(profile)
-        slot.appendChild(flunkyball)
-        slot.appendChild(beerpong)
-        slot.appendChild(flipcup)
-        slot.appendChild(gesamt)
+        slot.appendChild(teilgenommen)
+        slot.appendChild(durchschnittswert)
         var ausw = "auswertungen" 
         document.getElementById(ausw).appendChild(slot)
 
@@ -103,16 +99,8 @@ function sortTable(sort){
             columnIndex = 1
             break;
         case 2:
-            sortID = "flunkyball"
+            sortID = "teilgenommen"
             columnIndex = 2
-            break;
-        case 3:
-            sortID = "beerpong"
-            columnIndex = 3
-            break;
-        case 4:
-            sortID = "flipcup"
-            columnIndex = 4
             break;
         default:
             sortID="platz"
