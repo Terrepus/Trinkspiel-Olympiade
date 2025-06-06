@@ -36,7 +36,7 @@ function displayTable(data){
         element.removeChild(element.firstChild); 
          
     }
-    document.getElementById("title").innerHTML = "Gesamtauswertung"  
+    document.getElementById("title").innerHTML = "Normierte Gesamtauswertung"  
 
     for (var i = 0; i < data.length ; i++){           
         var slot = document.createElement("tr")
@@ -44,10 +44,10 @@ function displayTable(data){
         var pic = document.createElement("img")
         var name = document.createElement("figcaption")
         var profile = document.createElement("td")
-        var flunkyball = document.createElement("td")
+        var teilgenommen = document.createElement("td")
         var beerpong = document.createElement("td")
         var flipcup = document.createElement("td")
-        var gesamt = document.createElement("td")
+        var durchschnittswert = document.createElement("td")
         pic.src="images/profilbilder/default.png"        
         
         var player_name = data[i].Name.toLowerCase()
