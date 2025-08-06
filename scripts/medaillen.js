@@ -14,8 +14,8 @@ function fetchAndProcessExcelFile(url,discipline) {
                 .
                 1 -> Olympiade_1
             */
-            var firstSheetName = workbook.SheetNames[9];
-            var worksheet = workbook.Sheets[firstSheetName];
+            //var firstSheetName = workbook.SheetNames[10];
+            var worksheet = workbook.Sheets["Medaillen"];
 
             // Convert the sheet to JSON format
             var jsonData = XLSX.utils.sheet_to_json(worksheet);
